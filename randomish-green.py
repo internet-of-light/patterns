@@ -1,3 +1,4 @@
+# causes lights on the green set to move semi-randomly(?)
 import requests
 import time
 
