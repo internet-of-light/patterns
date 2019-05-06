@@ -7,6 +7,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 URL = "https:///api/"
 wait = 1
 
+# yeahhhhhhh boiiiiiiiiii
 
 def blink(light_id):
     print("blinking " + str(light_id))
