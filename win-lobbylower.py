@@ -37,23 +37,16 @@ time.sleep(sleepTime)
 
 # flash here
 
-# requests.put(URL + "/groups/1/action", "{\"on\": false, \"transitiontime\": 20}", verify=False)
-# time.sleep(sleepTime * 5)
-# requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 20, \"bri\": 254}", verify=False)
-# time.sleep(sleepTime * 5)
-# requests.put(URL + "/groups/1/action", "{\"on\": false, \"transitiontime\": 20}", verify=False)
-# time.sleep(sleepTime * 5)
-# requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 20}, \"bri\": 254", verify=False)
-
-requests.put(URL + "/groups/1/state", "{\"any_on\": false, \"transitiontime\": 10}", verify=False)
+requests.put(URL + "/groups/1/action", "{\"bri\": 100, \"transitiontime\": 20}", verify=False)
 time.sleep(sleepTime * 5)
-requests.put(URL + "/groups/1/state", "{\"all_on\": true, \"transitiontime\": 10}", verify=False)
+requests.put(URL + "/groups/1/action", "{\"bri\": 254, \"transitiontime\": 20}", verify=False)
 time.sleep(sleepTime * 5)
-requests.put(URL + "/groups/1/state", "{\"any_on\": false, \"transitiontime\": 10}", verify=False)
+requests.put(URL + "/groups/1/action", "{\"bri\": 100, \"transitiontime\": 20}", verify=False)
 time.sleep(sleepTime * 5)
-requests.put(URL + "/groups/1/state", "{\"all_on\": true, \"transitiontime\": 10}", verify=False)
+requests.put(URL + "/groups/1/action", "{\"bri\": 254, \"transitiontime\": 20}", verify=False)
 
 # Transition back
+# This is where a handoff back to the main system would go, too
 
-time.sleep(10)
+time.sleep(5)
 requests.put(URL + "/groups/1/action", "{\"on\": true, \"xy\": " + white + ", \"transitiontime\": 40, \"bri\": 254}", verify=False)
