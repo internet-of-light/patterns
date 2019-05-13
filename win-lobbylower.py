@@ -9,7 +9,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 URL = "https://172.28.219.179/api/rARKEpLebwXuW01cNVvQbnDEkd2bd56Nj-hpTETB"
 sleepTime = .2
 
-white = "[0.400,0.400]"
+white = "[0.486,0.460]"
 red = "[0.675,0.322]"
 
 #requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 1}", verify=False)
