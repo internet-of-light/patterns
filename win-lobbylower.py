@@ -37,15 +37,23 @@ time.sleep(sleepTime)
 
 # flash here
 
-requests.put(URL + "/groups/1/action", "{\"on\": false, \"transitiontime\": 20}", verify=False)
+# requests.put(URL + "/groups/1/action", "{\"on\": false, \"transitiontime\": 20}", verify=False)
+# time.sleep(sleepTime * 5)
+# requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 20, \"bri\": 254}", verify=False)
+# time.sleep(sleepTime * 5)
+# requests.put(URL + "/groups/1/action", "{\"on\": false, \"transitiontime\": 20}", verify=False)
+# time.sleep(sleepTime * 5)
+# requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 20}, \"bri\": 254", verify=False)
+
+requests.put(URL + "/groups/1/state", "{\"any_on\": false, \"transitiontime\": 10}", verify=False)
 time.sleep(sleepTime * 5)
-requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 20, \"bri\": 254}", verify=False)
+requests.put(URL + "/groups/1/state", "{\"all_on\": true, \"transitiontime\": 10}", verify=False)
 time.sleep(sleepTime * 5)
-requests.put(URL + "/groups/1/action", "{\"on\": false, \"transitiontime\": 20}", verify=False)
+requests.put(URL + "/groups/1/state", "{\"any_on\": false, \"transitiontime\": 10}", verify=False)
 time.sleep(sleepTime * 5)
-requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 20}, \"bri\": 254", verify=False)
+requests.put(URL + "/groups/1/state", "{\"all_on\": true, \"transitiontime\": 10}", verify=False)
 
 # Transition back
 
-time.sleep(4)
+time.sleep(10)
 requests.put(URL + "/groups/1/action", "{\"on\": true, \"xy\": " + white + ", \"transitiontime\": 40, \"bri\": 254}", verify=False)
