@@ -6,7 +6,7 @@ import time
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-URL = "https://172.28.219.179/api/NA4t9hTylAS7RWzmw4VYXrbSb2VnPpDIA4ctvrWe"
+URL = "https://172.28.219.179/api/rARKEpLebwXuW01cNVvQbnDEkd2bd56Nj-hpTETB"
 sleepTime = .2
 
 white = "[0.400,0.400]"
