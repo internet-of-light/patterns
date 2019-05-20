@@ -11,6 +11,7 @@ sleepTime = .5
 
 white = "[0.486,0.460]"
 red = "[0.675,0.322]"
+white_seq = "\"bri\": 100, \"hue\": 9000, \"sat\": 200,"
 
 #requests.put(URL + "/groups/1/action", "{\"on\": true, \"transitiontime\": 1}", verify=False)
 
@@ -49,4 +50,4 @@ requests.put(URL + "/groups/1/action", "{\"bri\": 254, \"transitiontime\": 20}",
 # This is where a handoff back to the main system would go, too
 
 time.sleep(5)
-requests.put(URL + "/groups/1/action", "{\"on\": true, \"bri\": 100, \"hue\": 9000, \"transitiontime\": 40, \"sat\": 200}", verify=False)
+requests.put(URL + "/groups/1/action", "{\"on\": true," + white_seq + " \"transitiontime\": 40}", verify=False)
